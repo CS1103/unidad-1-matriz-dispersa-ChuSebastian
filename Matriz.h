@@ -12,10 +12,11 @@ using namespace std;
 
 class Matriz {
 private:
-    int valor, f, c;
+    int f, c, **pM1, **pM2;
 public:
-    Matriz(int, int );
-    void array();
+    Matriz(int, int);
+    void Imprimir();
+    void sumar ();
 };
 
 

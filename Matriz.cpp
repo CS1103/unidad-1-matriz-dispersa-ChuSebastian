@@ -11,7 +11,8 @@ Matriz::Matriz(int _f, int _c) {
 }
 
 
-void Matriz::array() {
+
+void Matriz::Imprimir() {
     int x = (f * c) / 3;
     srand(time(nullptr));
 
@@ -19,26 +20,30 @@ void Matriz::array() {
     for (int i = 0; i < x; i++)
         pF[i] = rand()% f;
 
+
     int *pC = new int[x];
     for (int i = 0; i < x; i++)
         pC[i] = rand ()% c;
 
+
     int *pV = new int[x];
     for (int i = 0; i < x; i++)
         pV[i] = rand() % 9 + 1;
-
+    
 
     int ** pM = new int *[f];
     for (int i = 0; i<f; i++){
         pM[i] = new int [c];
     }
 
-    for (int i = 0; i< f; i++)
-        for (int j = 0; j < c; j++)
-            pM [i][j] = 0;
+    for (int i = 0; i < f; i++) {
+        for (int j = 0; j < c; j++) {
+            pM[i][j] = 0;
+        }
+    }
 
-    for (int cont = 0; cont < x; cont++){
-        pM [pC[cont]][pF[cont]] = pV[cont];
+    for (int k = 0; k < x; k++){
+        pM[pF[k]][pC[k]] = pV[k];
     }
 
     for (int i = 0; i< f; i++) {
@@ -49,10 +54,18 @@ void Matriz::array() {
     }
 
 
-    delete []  pC;
-    delete []pF;
+
+    delete [] pC;
+    delete [] pF;
     delete [] pV;
     delete [] pM;
 
 }
+
+void Matriz::sumar() {
+
+
+}
+
+
 

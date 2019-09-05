@@ -2,8 +2,9 @@
 
 int main() {
     int opcion;
-    int fila, columna;
-    Matriz *pMatriz = nullptr;
+    int f1, c1, f2, c2;
+    Matriz *pMatriz1 = nullptr;
+    Matriz *pMatriz2 = nullptr;
 
     do {
         cout << "Menu:" << endl;
@@ -18,41 +19,47 @@ int main() {
     switch (opcion){
         case 1:
             cout << endl;
-            cout << "Filas primer matriz: "; cin >> fila;
-            cout << "Columnas primer matriz: "; cin >> columna;
-            cout << "Filas segunda matriz: "; cin >> fila;
-            cout << "Columnas segunda matriz: "; cin >> columna;
+            cout << "Filas primer matriz: "; cin >> f1;
+            cout << "Columnas primer matriz: "; cin >> c1;
+            cout << "Filas segunda matriz: "; cin >> f2;
+            cout << "Columnas segunda matriz: "; cin >> c2;
+            pMatriz1 = new Matriz(f1,c1);
+            pMatriz2 = new Matriz(f2,c2);
+            pMatriz1 -> Imprimir();
+            cout << "\n\n";
+            pMatriz2 -> Imprimir();
             break;
 
         case 2:
-
             cout << endl;
-            cout << "Filas primer matriz: "; cin >> fila;
-            cout << "Columnas primer matriz: "; cin >> columna;
-            cout << "Filas segunda matriz: "; cin >> fila;
-            cout << "Columnas segunda matriz: "; cin >> columna;
+            cout << "Filas primer matriz: "; cin >> f1;
+            cout << "Columnas primer matriz: "; cin >> c1;
+            cout << "Filas segunda matriz: "; cin >> f2;
+            cout << "Columnas segunda matriz: "; cin >> c2;
+            pMatriz1 = new Matriz(f1,c1);
+            pMatriz2 = new Matriz(f2,c2);
+            pMatriz1 -> Imprimir();
+            cout << "\n\n";
+            pMatriz2 -> Imprimir();
             break;
 
 
         case 3:
             cout << endl;
-            cout << "Filas: "; cin >> fila;
-            cout <<"Columnas: "; cin >> columna;
+            cout << "Filas: "; cin >> f1;
+            cout <<"Columnas: "; cin >> c1;
+            pMatriz1 = new Matriz(f1,c1);
+            pMatriz1 -> Imprimir();
+
             break;
 
         case 4:
             cout << endl;
-            cout << "Filas: "; cin >> fila;
-            cout <<"Columnas: "; cin >> columna;
-            Matriz p1(fila, columna);
-            p1.array();
-
-
+            cout << "Filas: "; cin >> f1;
+            cout <<"Columnas: "; cin >> c1;
+            pMatriz1 = new Matriz(f1,c1);
+            pMatriz1-> Imprimir();
             break;
-
-
-
-
     }
 
     return 0;
